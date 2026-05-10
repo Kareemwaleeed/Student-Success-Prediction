@@ -70,7 +70,7 @@ translations = {
         "result_fail": "Predicted Result: Fail ⚠️",
         "chart_success": "Success",
         "chart_fail": "Failure",
-        "team_text": "Team: Kareem Waleed (Leader) 8251536 | Omar Hassan 8241388 | Abdulrahman Mohamed 8251537 | Ahmed Waleed 8251755 | Anas Reda 8251689"
+        "team_text": "Team: Kareem Waleed (Leader) 8251536 | Omar Hassan 8241388 | Abdulrahman Mohamed 8251537 | Ahmed Waleed 8251755 | Anas Reda 8251689 | Anas amr 8251689"
     }
 }
 
