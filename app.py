@@ -1,10 +1,8 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-# إعداد الصفحة لتكون واسعة واحترافية
 st.set_page_config(page_title="HUE - Student Success Prediction", page_icon="🎓", layout="centered")
 
-# إضافة التصميم (Styling) الخاص بالموقع بألوان هادئة
 st.markdown(
     """
     <style>
@@ -35,7 +33,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# القاموس الخاص باللغات
 translations = {
     "ar": {
         "university": "جامعة حورس - HUE | كلية الذكاء الاصطناعي",
@@ -77,13 +74,11 @@ translations = {
     }
 }
 
-# إدارة الحالات (Session State) للحفاظ على البيانات والتسجيل
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 if "lang" not in st.session_state:
     st.session_state.lang = "ar"
 
-# 1. شريط اختيار اللغة في الأعلى
 st.markdown("<div style='text-align: right;'>", unsafe_allow_html=True)
 lang_selection = st.radio("🌐 Language / اللغة", ["العربية", "English"], horizontal=True, index=0 if st.session_state.lang == "ar" else 1)
 st.session_state.lang = "ar" if lang_selection == "العربية" else "en"
@@ -91,10 +86,8 @@ st.markdown("</div>", unsafe_allow_html=True)
 
 t = translations[st.session_state.lang]
 
-# العنوان الرئيسي للجامعة
 st.markdown(f"<h3 style='text-align: center; color: #38BDF8;'>{t['university']}</h3>", unsafe_allow_html=True)
 
-# 2. صفحة تسجيل الدخول
 if not st.session_state.logged_in:
     st.markdown(f"<h2 style='text-align: center; margin-top: 30px;'>{t['login_title']}</h2>", unsafe_allow_html=True)
     
@@ -113,7 +106,6 @@ if not st.session_state.logged_in:
             else:
                 st.warning("⚠️ Please enter both Name and University ID.")
 
-# 3. الصفحة الرئيسية للموقع (بعد تسجيل الدخول)
 else:
     st.markdown(f"<h1 style='text-align: center; margin-top: 20px;'>{t['title']}</h1>", unsafe_allow_html=True)
     st.write(f"**Welcome/مرحباً:** {st.session_state.name} | ID: {st.session_state.id}")
@@ -126,7 +118,6 @@ else:
     grade = st.number_input(t['grade_label'], min_value=0.0, max_value=100.0, value=70.0, step=1.0)
     
     if st.button(t['predict_btn']):
-        # خوارزمية التنبؤ بنجاح الطالب
         prob_score = (min(hours, 10) / 10 * 0.4) + (attendance / 100 * 0.4) + (grade / 100 * 0.2)
         success_prob = prob_score * 100
         fail_prob = 100 - success_prob
@@ -136,7 +127,6 @@ else:
         else:
             st.error(f"{t['result_fail']} - {success_prob:.1f}%")
             
-        # رسم المخطط البياني (Pie Chart) 
         fig, ax = plt.subplots(figsize=(4, 3))
         fig.patch.set_facecolor('#0F172A')
         ax.set_facecolor('#0F172A')
@@ -158,7 +148,6 @@ else:
         
     st.markdown("---")
     
-    # أسماء الفريق
     st.caption(f"{t['team_text']}")
     
     if st.button(t['logout_btn']):
