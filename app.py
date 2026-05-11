@@ -51,7 +51,7 @@ translations = {
         "result_fail": "النتيجة المتوقعة: راسب ⚠️",
         "chart_success": "Success",
         "chart_fail": "Failure",
-        "team_text": "الفريق: كريم وليد (الليدر) 8251536 | عمر حسن 8241388 | عبد الرحمن محمد 8251537 | أحمد وليد 8251755 | أنس عمرو 82511045 | أنس رضا 8251689"
+        "team_text": " | 8251184 الفريق: كريم وليد (الليدر) 8251536 | عمر حسن 8241388 | عبد الرحمن محمد 8251537 | أحمد وليد 8251755 | أنس عمرو 82511045 | أنس رضا 8251689 احمد ايمن"
     },
     "en": {
         "university": "Horus University Egypt - HUE",
@@ -70,7 +70,7 @@ translations = {
         "result_fail": "Predicted Result: Fail ⚠️",
         "chart_success": "Success",
         "chart_fail": "Failure",
-        "team_text": "Team: Kareem Waleed (Leader) 8251536 | Omar Hassan 8241388 | Abdulrahman Mohamed 8251537 | Ahmed Waleed 8251755 | Anas Reda 8251689 | Anas amr 82511045"
+        "team_text": "Team: Kareem Waleed (Leader) 8251536 | Omar Hassan 8241388 | Abdulrahman Mohamed 8251537 | Ahmed Waleed 8251755 | Anas Reda 8251689 | Anas amr 82511045 | ahmed ayman 8251184"
     }
 }
 
